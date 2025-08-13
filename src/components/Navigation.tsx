@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
@@ -41,8 +41,12 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold text-[#FEBE5D] hover:text-white transition-colors duration-300">
-            Premise
+          <Link to="/" className="flex items-center hover:opacity-80 transition-opacity duration-300">
+            <img 
+              src="/Final Logo.png" 
+              alt="Premise Logo" 
+              className="h-10 w-auto"
+            />
           </Link>
 
           {/* Desktop Menu */}
