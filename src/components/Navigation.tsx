@@ -21,7 +21,7 @@ const Navigation = () => {
     { name: 'Home', path: '/' },
     { name: 'Artist Guide', path: '/artist-guide' },
     { name: 'Kala Rooms', path: '/kala-rooms' },
-    { name: '90 Secs with Premise', path: '/90-secs' },
+    { name: 'Content', path: '/content' },
     { name: 'About', path: '/about' },
   ];
 

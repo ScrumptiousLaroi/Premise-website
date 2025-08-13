@@ -82,7 +82,7 @@ const Homepage = () => {
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
       {/* Hero Section with Background Video */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-gradient-to-br from-gray-900 via-black to-gray-900">
+  <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-black">
         {/* Background Video */}
         <div className="absolute inset-0 z-0">
           <video
@@ -147,7 +147,7 @@ const Homepage = () => {
 
       {/* Local Videos Section */}
       <motion.section 
-        className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black to-gray-900"
+  className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-black"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
@@ -166,7 +166,7 @@ const Homepage = () => {
                 <span className="relative">
                   <span className="text-[#FEBE5D]">Artists</span>
                   <motion.div
-                    className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-[#FEBE5D] to-transparent"
+                    className="absolute -bottom-2 left-0 w-full h-1 bg-[#FEBE5D]"
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
                     transition={{ duration: 1, delay: 1 }}
@@ -218,7 +218,7 @@ const Homepage = () => {
                 </video>
 
                 {/* Overlay Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-70 group-hover:opacity-50 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-black/80 opacity-70 group-hover:opacity-50 transition-opacity duration-300" />
 
                 {/* Content Overlay */}
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
@@ -283,46 +283,50 @@ const Homepage = () => {
               
               {/* Animated background effect */}
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-[#FEBE5D]/0 via-[#FEBE5D]/20 to-[#FEBE5D]/0 -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"
+                className="absolute inset-0 bg-[#FEBE5D]/10 -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"
               />
             </motion.a>
           </motion.div>
         </div>
       </motion.section>
 
-      {/* Call to Action Section */}
+      {/* Newsletter Signup Section */}
       <motion.section 
-        className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900 to-black"
+  className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-black flex flex-col items-center"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 1.5 }}
       >
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.h2 
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-white"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 1.7 }}
-          >
-            Ready to Experience the{' '}
-            <span className="text-[#FEBE5D]">True Face</span>{' '}
-            of Indian Music?
-          </motion.h2>
-          <motion.p 
-            className="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 1.9 }}
-          >
-            Join us on a journey through the authentic sounds and stories that define India's musical landscape.
-          </motion.p>
-          <motion.button
-            className="px-8 py-4 bg-[#FEBE5D] text-black rounded-full font-bold text-lg hover:bg-white transition-all duration-300 shadow-lg"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Explore Our Artists
-          </motion.button>
+        {/* Animated Divider */}
+        <motion.div
+          className="w-24 h-1 rounded-full bg-[#FEBE5D] mb-10 animate-pulse"
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 1, delay: 1.2 }}
+          style={{ originX: 0.5 }}
+        />
+        <div className="max-w-2xl w-full mx-auto text-center">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4 tracking-tight">
+            Newsletter Signup
+          </h2>
+          <p className="text-lg sm:text-xl text-gray-300 mb-8 font-light italic">
+            "Stories worth your time."<br/>
+            Monthly updates, exclusive content, first access to Kala Rooms.
+          </p>
+          <form className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <input
+              type="email"
+              required
+              placeholder="Your email address"
+              className="w-full sm:w-auto px-6 py-3 rounded-full bg-gray-900 text-white border border-gray-700 focus:outline-none focus:border-[#FEBE5D] transition-all duration-300 placeholder-gray-500"
+            />
+            <button
+              type="submit"
+              className="px-8 py-3 bg-[#FEBE5D] text-black font-bold rounded-full hover:bg-white transition-all duration-300 shadow-lg text-lg"
+            >
+              Subscribe
+            </button>
+          </form>
         </div>
       </motion.section>
     </div>
