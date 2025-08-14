@@ -11,7 +11,7 @@ import About from './pages/About';
 
 function App() {
   return (
-    <Router basename="/Premise-website">
+    <Router>
       <div className="min-h-screen bg-black text-white flex flex-col">
         <Navigation />
         <div className="flex-1">
