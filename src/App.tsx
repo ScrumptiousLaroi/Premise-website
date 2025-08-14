@@ -10,6 +10,7 @@ import ArtistGuide from './pages/ArtistGuide';
 import KalaRooms from './pages/KalaRooms';
 import Content from './pages/content';
 import About from './pages/About';
+// Trigger deployment - fix domain redirection
 
 function App() {
   const [isUnlocked, setIsUnlocked] = useState(false);
