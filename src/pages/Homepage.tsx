@@ -16,63 +16,63 @@ const Homepage = () => {
   const localVideos = [
     {
       id: 'akso',
-      src: '/videos/akso.mp4',
+      src: './videos/akso.mp4',
       title: 'Akso',
       description: 'Musical journey with Akso',
       link: 'https://www.instagram.com/reel/DBWXOO8ATEt/'
     },
     {
       id: 'ankit-tiwari',
-      src: '/videos/ankit tiwari.mp4',
+      src: './videos/ankit tiwari.mp4',
       title: 'Ankur Tewari',
       description: 'Soulful melodies by Ankur Tewari',
       link: 'https://www.instagram.com/reel/DMXy444xFMx/'
     },
     {
       id: 'faizal',
-      src: '/videos/Faizal.mp4',
+      src: './videos/Faizal.mp4',
       title: 'Faizal',
       description: 'Artistic expression by Faizal',
       link: 'https://www.instagram.com/reel/C_ai1KFyC_q/'
     },
     {
       id: 'green-park',
-      src: '/videos/green park.mp4',
+      src: './videos/green park.mp4',
       title: 'Green Park',
       description: 'Live from Green Park',
       link: 'https://www.instagram.com/reel/DCrVrK3znp1/'
     },
     {
       id: 'indian-ocean-music',
-      src: '/videos/indian ocean music.mp4',
+      src: './videos/indian ocean music.mp4',
       title: 'Indian Ocean Music',
       description: 'Waves of Indian Ocean Music',
       link: 'https://www.instagram.com/reel/DHLsnyETC5P/'
     },
     {
       id: 'karun',
-      src: '/videos/Karun.mp4',
+      src: './videos/Karun.mp4',
       title: 'Karun',
       description: 'Creative vibes with Karun',
       link: 'https://www.instagram.com/reel/DM0AVz2TRmw/'
     },
     {
       id: 'muzzle',
-      src: '/videos/muzzle.mp4',
+      src: './videos/muzzle.mp4',
       title: 'Muzzle',
       description: 'Raw energy from Muzzle',
       link: 'https://www.instagram.com/reel/DKkIxRyzc0H/'
     },
     {
       id: 'shywry',
-      src: '/videos/shywry.mp4',
+      src: './videos/shywry.mp4',
       title: 'Shywry',
       description: 'Unique sounds by Shywry',
       link: 'https://www.instagram.com/reel/DIBu8OoSU13/'
     },
     {
       id: 'yo-soy-mohito',
-      src: '/videos/yo soy mohito.mp4',
+      src: './videos/yo soy mohito.mp4',
       title: 'Mohito',
       description: 'Refreshing beats from Mohito',
       link: 'https://www.instagram.com/reel/DLhmc1izBtm/'
@@ -93,7 +93,7 @@ const Homepage = () => {
             className="w-full h-full object-cover opacity-60"
             poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080' viewBox='0 0 1920 1080'%3E%3Crect width='1920' height='1080' fill='%23000000'/%3E%3C/svg%3E"
           >
-            <source src="/premise-bg.mp4" type="video/mp4" />
+            <source src="./premise-bg.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           {/* Dark overlay */}

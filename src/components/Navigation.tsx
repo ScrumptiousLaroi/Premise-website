@@ -43,7 +43,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center hover:opacity-80 transition-opacity duration-300">
             <img 
-              src="/Final Logo.png" 
+              src="./Final Logo.png" 
               alt="Premise Logo" 
               className="h-10 w-auto"
             />
