@@ -42,13 +42,13 @@ const About = () => {
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-12">
-            WHY <span className="text-[#FEBE5D]">PREMISE.</span>
+            WHY <span className="text-[#FEBE5D]">PREMISE.</span>?
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {/* For Music Lovers */}
             <div className="bg-black border border-[#FEBE5D] rounded-3xl shadow-xl flex flex-col items-center px-8 py-10 text-center">
               <h3 className="text-2xl font-bold text-[#FEBE5D] mb-4 uppercase tracking-wide">For Music Lovers</h3>
-              <p className="text-lg text-gray-300 font-light">
+              <p className="text-lg text-white font-light text-justify">
                 Stop consuming. Start connecting.<br />
                 We show you the story behind every song.
               </p>
@@ -56,7 +56,7 @@ const About = () => {
             {/* For Artists */}
             <div className="bg-black border border-[#FEBE5D] rounded-3xl shadow-xl flex flex-col items-center px-8 py-10 text-center">
               <h3 className="text-2xl font-bold text-[#FEBE5D] mb-4 uppercase tracking-wide">For Artists</h3>
-              <p className="text-lg text-gray-300 font-light">
+              <p className="text-lg text-white font-light text-justify">
                 Stop being just another name in a playlist.<br />
                 We make sure your story gets told.
               </p>
@@ -64,7 +64,7 @@ const About = () => {
             {/* For the Culture */}
             <div className="bg-black border border-[#FEBE5D] rounded-3xl shadow-xl flex flex-col items-center px-8 py-10 text-center">
               <h3 className="text-2xl font-bold text-[#FEBE5D] mb-4 uppercase tracking-wide">For the Culture</h3>
-              <p className="text-lg text-gray-300 font-light">
+              <p className="text-lg text-white font-light text-justify">
                 Stop letting history disappear.<br />
                 We're preserving it for the next generation.
               </p>
@@ -135,7 +135,7 @@ const About = () => {
                 <Users size={32} />
               </div>
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">
-                3M+
+                4M+
               </div>
               <div className="text-gray-400">
                 Music Lovers Reached

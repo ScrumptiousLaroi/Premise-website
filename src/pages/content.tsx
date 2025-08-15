@@ -72,8 +72,7 @@ const Content = () => {
             className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto font-light"
             style={{ fontFamily: 'Helvetica Neue, sans-serif' }}
           >
-            Cinematic grunge poetry meets authentic storytelling.<br/>
-            Four distinct verticals. One unified vision.
+            Showcasing the True Face of Indian Music through different perspectives.<br/>
           </motion.p>
         </section>
         </div>
@@ -137,7 +136,7 @@ const Content = () => {
                     {/* Main Content */}
                     <div className="text-center space-y-4">
                       <h2 
-                        className="text-3xl md:text-4xl font-bold text-[#F5F5F5] leading-tight group-hover:scale-105 transition-transform duration-300"
+                        className="text-3xl md:text-4xl font-bold text-[#FEBE5D] leading-tight group-hover:scale-105 transition-transform duration-300"
                         style={{ fontFamily: 'Playfair Display, serif' }}
                       >
                         {vertical.title}
