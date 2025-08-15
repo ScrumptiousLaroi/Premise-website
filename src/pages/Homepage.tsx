@@ -16,65 +16,65 @@ const Homepage = () => {
   const localVideos = [
     {
       id: 'akso',
-      src: './videos/akso.mp4',
-      title: 'Akso',
-      description: 'Musical journey with Akso',
+      src: '/videos/akso.mp4',
+      title: 'Akso Maniac',
+      description: 'Musical journey of Akso',
       link: 'https://www.instagram.com/reel/DBWXOO8ATEt/'
     },
     {
       id: 'ankit-tiwari',
       src: './videos/ankit tiwari.mp4',
       title: 'Ankur Tewari',
-      description: 'Soulful melodies by Ankur Tewari',
+      description: '90 secs of Soulful melodies',
       link: 'https://www.instagram.com/reel/DMXy444xFMx/'
     },
     {
       id: 'faizal',
       src: './videos/Faizal.mp4',
       title: 'Faizal',
-      description: 'Artistic expression by Faizal',
+      description: 'Faizal confronts his truths',
       link: 'https://www.instagram.com/reel/C_ai1KFyC_q/'
     },
     {
       id: 'green-park',
       src: './videos/green park.mp4',
       title: 'Green Park',
-      description: 'Live from Green Park',
+      description: 'Inside an Indie Band',
       link: 'https://www.instagram.com/reel/DCrVrK3znp1/'
     },
     {
       id: 'indian-ocean-music',
       src: './videos/indian ocean music.mp4',
       title: 'Indian Ocean Music',
-      description: 'Waves of Indian Ocean Music',
+      description: 'A day with Indian Ocean Music',
       link: 'https://www.instagram.com/reel/DHLsnyETC5P/'
     },
     {
       id: 'karun',
       src: './videos/Karun.mp4',
       title: 'Karun',
-      description: 'Creative vibes with Karun',
+      description: 'Karun’s confession about his chehre',
       link: 'https://www.instagram.com/reel/DM0AVz2TRmw/'
     },
     {
       id: 'muzzle',
       src: './videos/muzzle.mp4',
       title: 'Muzzle',
-      description: 'Raw energy from Muzzle',
+      description: '90 secs of Raw energy',
       link: 'https://www.instagram.com/reel/DKkIxRyzc0H/'
     },
     {
       id: 'shywry',
       src: './videos/shywry.mp4',
       title: 'Shywry',
-      description: 'Unique sounds by Shywry',
+      description: '90 secs of Unique sounds',
       link: 'https://www.instagram.com/reel/DIBu8OoSU13/'
     },
     {
       id: 'yo-soy-mohito',
       src: './videos/yo soy mohito.mp4',
       title: 'Mohito',
-      description: 'Refreshing beats from Mohito',
+      description: 'Revolutionizing Haryanvi Music',
       link: 'https://www.instagram.com/reel/DLhmc1izBtm/'
     }
   ];
@@ -82,7 +82,7 @@ const Homepage = () => {
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
       {/* Hero Section with Background Video */}
-  <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-black">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-black">
         {/* Background Video */}
         <div className="absolute inset-0 z-0">
           <video
@@ -101,39 +101,37 @@ const Homepage = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 flex flex-col items-center justify-center w-full h-full text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="space-y-6 md:space-y-8"
+            className="flex flex-col items-center justify-center w-full h-full space-y-6 md:space-y-8"
           >
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-[#FEBE5D] leading-none">
-              <span className="block">PREMISE</span>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-[#FEBE5D] leading-none w-full flex justify-center items-center">
+              <span className="block w-full text-center">PREMISE.</span>
             </h1>
-            
-            <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white font-light max-w-3xl mx-auto">
+            <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white font-light max-w-3xl mx-auto w-full text-center">
               True Face of Indian Music
             </p>
-            
-            <div className="pt-6 md:pt-8">
+            <div className="pt-6 md:pt-8 flex justify-center w-full">
               <motion.div
                 className="flex flex-col items-center cursor-pointer"
                 animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
                 onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
               >
                 <div className="w-6 h-10 border-2 border-[#FEBE5D] rounded-full flex justify-center">
                   <motion.div
                     className="w-1 h-3 bg-[#FEBE5D] rounded-full mt-2"
                     animate={{ y: [0, 12, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                    transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
                   />
                 </div>
                 <motion.div
                   className="mt-3"
                   animate={{ y: [0, 5, 0] }}
-                  transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+                  transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut', delay: 0.3 }}
                 >
                   <svg className="w-6 h-6 text-[#FEBE5D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
@@ -270,7 +268,7 @@ const Homepage = () => {
               whileTap={{ scale: 0.95 }}
             >
               <span className="relative z-10 flex items-center gap-2">
-                Discover All Artists
+                Discover All Stories
                 <motion.svg 
                   className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" 
                   fill="none" 

@@ -100,7 +100,7 @@ const KalaRooms = () => {
               <Users className="text-[#FEBE5D] mx-auto mb-6" size={48} />
               <h3 className="text-xl font-bold text-white mb-4">Unique Collaborations</h3>
               <p className="text-gray-400">
-                Witness unexpected musical partnerships and cross-genre experiments that push boundaries.
+                Witness unexpected collaborations with businesses that are contributing to the music culture.
               </p>
             </motion.div>
 
@@ -112,7 +112,7 @@ const KalaRooms = () => {
               className="text-center p-8 bg-black rounded-lg"
             >
               <Play className="text-[#FEBE5D] mx-auto mb-6" size={48} />
-              <h3 className="text-xl font-bold text-white mb-4">Raw Performances</h3>
+              <h3 className="text-xl font-bold text-white mb-4">Real Music</h3>
               <p className="text-gray-400">
                 Unfiltered, authentic moments where artists express their true musical identity.
               </p>
@@ -131,7 +131,7 @@ const KalaRooms = () => {
             viewport={{ once: true }}
             className="text-4xl font-bold text-white mb-16 text-center"
           >
-            Recent Sessions
+            Recent Episodes
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
