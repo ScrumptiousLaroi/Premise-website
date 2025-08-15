@@ -23,56 +23,56 @@ const Homepage = () => {
     },
     {
       id: 'ankit-tiwari',
-      src: '/videos/ankit tiwari.mp4',
+      src: './videos/ankit tiwari.mp4',
       title: 'Ankur Tewari',
       description: '90 secs of Soulful melodies',
       link: 'https://www.instagram.com/reel/DMXy444xFMx/'
     },
     {
       id: 'faizal',
-      src: '/videos/Faizal.mp4',
+      src: './videos/Faizal.mp4',
       title: 'Faizal',
       description: 'Faizal confronts his truths',
       link: 'https://www.instagram.com/reel/C_ai1KFyC_q/'
     },
     {
       id: 'green-park',
-      src: '/videos/green park.mp4',
+      src: './videos/green park.mp4',
       title: 'Green Park',
       description: 'Inside an Indie Band',
       link: 'https://www.instagram.com/reel/DCrVrK3znp1/'
     },
     {
       id: 'indian-ocean-music',
-      src: '/videos/indian ocean music.mp4',
+      src: './videos/indian ocean music.mp4',
       title: 'Indian Ocean Music',
       description: 'A day with Indian Ocean Music',
       link: 'https://www.instagram.com/reel/DHLsnyETC5P/'
     },
     {
       id: 'karun',
-      src: '/videos/Karun.mp4',
+      src: './videos/Karun.mp4',
       title: 'Karun',
       description: 'Karun’s confession about his chehre',
       link: 'https://www.instagram.com/reel/DM0AVz2TRmw/'
     },
     {
       id: 'muzzle',
-      src: '/videos/muzzle.mp4',
+      src: './videos/muzzle.mp4',
       title: 'Muzzle',
       description: '90 secs of Raw energy',
       link: 'https://www.instagram.com/reel/DKkIxRyzc0H/'
     },
     {
       id: 'shywry',
-      src: '/videos/shywry.mp4',
+      src: './videos/shywry.mp4',
       title: 'Shywry',
       description: '90 secs of Unique sounds',
       link: 'https://www.instagram.com/reel/DIBu8OoSU13/'
     },
     {
       id: 'yo-soy-mohito',
-      src: '/videos/yo soy mohito.mp4',
+      src: './videos/yo soy mohito.mp4',
       title: 'Mohito',
       description: 'Revolutionizing Haryanvi Music',
       link: 'https://www.instagram.com/reel/DLhmc1izBtm/'
@@ -93,7 +93,7 @@ const Homepage = () => {
             className="w-full h-full object-cover opacity-60"
             poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080' viewBox='0 0 1920 1080'%3E%3Crect width='1920' height='1080' fill='%23000000'/%3E%3C/svg%3E"
           >
-            <source src="/premise-bg.mp4" type="video/mp4" />
+            <source src="./premise-bg.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           {/* Dark overlay */}
