@@ -13,7 +13,7 @@ const About = () => {
     },
     {
       name: 'Os Goyal',
-      role: 'Business and Founder',
+      role: 'Business Head and Founder',
       image: './os_pfp.jpeg',
       description: 'In a relationship with Google Meet',
       href: 'https://www.linkedin.com/in/os-goyal/'
