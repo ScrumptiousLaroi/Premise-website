@@ -47,7 +47,7 @@ const About = () => {
             <div className="bg-black border border-[#FEBE5D] rounded-3xl shadow-xl flex flex-col items-center px-8 py-10 text-center">
               <h3 className="text-2xl font-bold text-[#FEBE5D] mb-4 uppercase tracking-wide">For Artists</h3>
               <p className="text-lg text-white font-light text-justify">
-                Stop being just another name in a playlist.<br />
+                <br></br>Stop being just another name in a playlist.<br />
                 We make sure your story gets told.
               </p>
             </div>
