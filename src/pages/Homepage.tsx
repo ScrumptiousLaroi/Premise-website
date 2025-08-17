@@ -271,9 +271,15 @@ const Homepage = () => {
                 className="absolute inset-0 bg-[#FEBE5D]/10 -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"
               />
             </motion.a>
+            
           </motion.div>
         </div>
       </motion.section>
+
+      {/* Fading Divider */}
+      <div className="w-full flex justify-center my-12">
+        <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEBE5D] to-transparent opacity-70" />
+      </div>
 
       {/* Newsletter Signup Section */}
       <motion.section 
@@ -282,14 +288,7 @@ const Homepage = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 1.5 }}
       >
-        {/* Animated Divider */}
-        <motion.div
-          className="w-24 h-1 rounded-full bg-[#FEBE5D] mb-10 animate-pulse"
-          initial={{ scaleX: 0 }}
-          animate={{ scaleX: 1 }}
-          transition={{ duration: 1, delay: 1.2 }}
-          style={{ originX: 0.5 }}
-        />
+        
         <div className="max-w-2xl w-full mx-auto text-center">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4 tracking-tight">
             Newsletter Signup

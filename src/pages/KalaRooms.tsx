@@ -1,81 +1,69 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Play, ExternalLink } from 'lucide-react';
+import { Play } from 'lucide-react';
 
 const KalaRooms = () => {
-  // Gallery images with Instagram links
+  // Gallery images from kalarooms folder
   const galleryImages = [
     {
       id: 1,
-      src: 'https://images.pexels.com/photos/1407322/pexels-photo-1407322.jpeg',
-      alt: 'Kala Room Session 1',
-      instagramUrl: 'https://www.instagram.com/p/example1/'
+      src: '/kalarooms/1.jpg',
+      alt: 'Kala Rooms'
     },
     {
       id: 2,
-      src: 'https://images.pexels.com/photos/1699161/pexels-photo-1699161.jpeg',
-      alt: 'Kala Room Session 2',
-      instagramUrl: 'https://www.instagram.com/p/example2/'
+      src: '/kalarooms/2.jpg',
+      alt: 'Kala Rooms'
     },
     {
       id: 3,
-      src: 'https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg',
-      alt: 'Kala Room Session 3',
-      instagramUrl: 'https://www.instagram.com/p/example3/'
+      src: '/kalarooms/3.jpg',
+      alt: 'Kala Rooms'
     },
     {
       id: 4,
-      src: 'https://images.pexels.com/photos/1389429/pexels-photo-1389429.jpeg',
-      alt: 'Kala Room Session 4',
-      instagramUrl: 'https://www.instagram.com/p/example4/'
+      src: '/kalarooms/4.jpg',
+      alt: 'Kala Rooms'
     },
     {
       id: 5,
-      src: 'https://images.pexels.com/photos/164693/pexels-photo-164693.jpeg',
-      alt: 'Kala Room Session 5',
-      instagramUrl: 'https://www.instagram.com/p/example5/'
+      src: '/kalarooms/5.jpg',
+      alt: 'Kala Rooms'
     },
     {
       id: 6,
-      src: 'https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg',
-      alt: 'Kala Room Session 6',
-      instagramUrl: 'https://www.instagram.com/p/example6/'
+      src: '/kalarooms/6.jpg',
+      alt: 'Kala Rooms'
     },
     {
       id: 7,
-      src: 'https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg',
-      alt: 'Kala Room Session 7',
-      instagramUrl: 'https://www.instagram.com/p/example7/'
+      src: '/kalarooms/7.jpg',
+      alt: 'Kala Rooms'
     },
     {
       id: 8,
-      src: 'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg',
-      alt: 'Kala Room Session 8',
-      instagramUrl: 'https://www.instagram.com/p/example8/'
+      src: '/kalarooms/8.jpg',
+      alt: 'Kala Rooms'
     },
     {
       id: 9,
-      src: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg',
-      alt: 'Kala Room Session 9',
-      instagramUrl: 'https://www.instagram.com/p/example9/'
+      src: '/kalarooms/9.jpg',
+      alt: 'Kala Rooms'
     },
     {
       id: 10,
-      src: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg',
-      alt: 'Kala Room Session 10',
-      instagramUrl: 'https://www.instagram.com/p/example10/'
+      src: '/kalarooms/10.jpg',
+      alt: 'Kala Rooms'
     },
     {
       id: 11,
-      src: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg',
-      alt: 'Kala Room Session 11',
-      instagramUrl: 'https://www.instagram.com/p/example11/'
+      src: '/kalarooms/11.jpg',
+      alt: 'Kala Rooms'
     },
     {
       id: 12,
-      src: 'https://images.pexels.com/photos/3756766/pexels-photo-3756766.jpeg',
-      alt: 'Kala Room Session 12',
-      instagramUrl: 'https://www.instagram.com/p/example12/'
+      src: '/kalarooms/12.jpg',
+      alt: 'Kala Rooms'
     }
   ];
 
@@ -83,27 +71,15 @@ const KalaRooms = () => {
   const featuredVideos = [
     {
       id: 1,
-      title: 'Acoustic Sessions Vol. 1',
-      thumbnail: 'https://images.pexels.com/photos/1407322/pexels-photo-1407322.jpeg',
-      youtubeUrl: 'https://www.youtube.com/watch?v=example1'
+      title: 'Arjun Rana Kala Rooms, Episode - 01',
+      thumbnail: './kalarooms/arjun_yt.jpg',
+      youtubeUrl: 'https://www.youtube.com/watch?v=FkMMbtJCWO0'
     },
     {
       id: 2,
-      title: 'Classical Fusion Live',
-      thumbnail: 'https://images.pexels.com/photos/1699161/pexels-photo-1699161.jpeg',
-      youtubeUrl: 'https://www.youtube.com/watch?v=example2'
-    },
-    {
-      id: 3,
-      title: 'Underground Indie Sessions',
-      thumbnail: 'https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg',
-      youtubeUrl: 'https://www.youtube.com/watch?v=example3'
-    },
-    {
-      id: 4,
-      title: 'Collaborative Experiments',
-      thumbnail: 'https://images.pexels.com/photos/1389429/pexels-photo-1389429.jpeg',
-      youtubeUrl: 'https://www.youtube.com/watch?v=example4'
+      title: 'Rashim Anand Kala Rooms, Episode - 02',
+      thumbnail: './kalarooms/Rashim_yt.jpg',
+      youtubeUrl: 'https://www.youtube.com/watch?v=3CtI3BUSAJc'
     }
   ];
 
@@ -157,6 +133,7 @@ const KalaRooms = () => {
 
       {/* Gallery Section */}
       <section className="py-20 px-4 bg-black">
+        
         <div className="max-w-7xl mx-auto">
           <motion.h2
             initial={{ y: 50, opacity: 0 }}
@@ -176,17 +153,13 @@ const KalaRooms = () => {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group relative overflow-hidden rounded-lg cursor-pointer aspect-square"
-                onClick={() => window.open(image.instagramUrl, '_blank')}
+                className="group relative overflow-hidden rounded-lg aspect-square"
               >
                 <img
                   src={image.src}
                   alt={image.alt}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <ExternalLink className="text-white" size={24} />
-                </div>
                 <div className="absolute inset-0 ring-2 ring-transparent group-hover:ring-red-600 transition-all duration-300 rounded-lg"></div>
               </motion.div>
             ))}
@@ -195,7 +168,12 @@ const KalaRooms = () => {
       </section>
 
       {/* Featured Videos Section */}
-      <section className="py-20 px-4 bg-gray-900">
+      <section className="py-20 px-4 bg-black">
+        {/* Fading Divider */}
+        <div className="w-full flex justify-center my-12">
+          <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEBE5D] to-transparent opacity-70" />
+        </div>
+        
         <div className="max-w-7xl mx-auto">
           <motion.h2
             initial={{ y: 50, opacity: 0 }}
@@ -243,6 +221,11 @@ const KalaRooms = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4 bg-black">
+        {/* Fading Divider */}
+        <div className="w-full flex justify-center my-12">
+          <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEBE5D] to-transparent opacity-70" />
+        </div>
+        
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2
             initial={{ y: 50, opacity: 0 }}
@@ -251,7 +234,7 @@ const KalaRooms = () => {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-bold text-white mb-8"
           >
-            Ready to Join a Session?
+            Request a personalized कला <span className="text-red-600">Rooms</span> session and showcase your art
           </motion.h2>
           <motion.p
             initial={{ y: 30, opacity: 0 }}
@@ -260,7 +243,7 @@ const KalaRooms = () => {
             viewport={{ once: true }}
             className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto"
           >
-            Experience music in its most authentic form. Book your spot in our next Kala Room session.
+            Share your music with the world in our intimate studio setting. Let us capture your authentic sound and story.
           </motion.p>
           <motion.button
             initial={{ y: 30, opacity: 0 }}
