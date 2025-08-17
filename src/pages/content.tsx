@@ -9,7 +9,7 @@ const Content = () => {
       tagline: 'Their story. Their words. Their truth.',
       quote: 'Because the best stories don\'t need long introductions.',
       description: 'Raw, unfiltered intimacy. A confession.',
-      backgroundImage: 'https://images.pexels.com/photos/1389429/pexels-photo-1389429.jpeg',
+      backgroundImage: './content/90_sec_ankur_tewari.jpg',
       icon: Mic,
       aesthetic: 'Extreme close-up on lips, about to speak'
     },
@@ -136,8 +136,8 @@ const Content = () => {
                     {/* Main Content */}
                     <div className="text-center space-y-4">
                       <h2 
-                        className="text-3xl md:text-4xl font-bold text-[#FEBE5D] leading-tight group-hover:scale-105 transition-transform duration-300"
-                        style={{ fontFamily: 'Playfair Display, serif' }}
+                        className="text-3xl md:text-4xl font-bold leading-tight group-hover:scale-105 transition-transform duration-300"
+                        style={{ fontFamily: 'Playfair Display, serif', color: '#FEDE5B' }}
                       >
                         {vertical.title}
                       </h2>
@@ -228,8 +228,8 @@ const Content = () => {
                     {/* Main Content */}
                     <div className="text-center space-y-4">
                       <h2 
-                        className="text-3xl md:text-4xl font-bold text-[#F5F5F5] leading-tight group-hover:scale-105 transition-transform duration-300"
-                        style={{ fontFamily: 'Playfair Display, serif' }}
+                        className="text-3xl md:text-4xl font-bold leading-tight group-hover:scale-105 transition-transform duration-300"
+                        style={{ fontFamily: 'Playfair Display, serif', color: '#FEDE5B' }}
                       >
                         {vertical.title}
                       </h2>

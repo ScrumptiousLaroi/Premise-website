@@ -117,26 +117,13 @@ const Homepage = () => {
             <div className="pt-6 md:pt-8 flex justify-center w-full">
               <motion.div
                 className="flex flex-col items-center cursor-pointer"
-                animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+                animate={{ y: [0, 5, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
                 onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
               >
-                <div className="w-6 h-10 border-2 border-[#FEBE5D] rounded-full flex justify-center">
-                  <motion.div
-                    className="w-1 h-3 bg-[#FEBE5D] rounded-full mt-2"
-                    animate={{ y: [0, 12, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-                  />
-                </div>
-                <motion.div
-                  className="mt-3"
-                  animate={{ y: [0, 5, 0] }}
-                  transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut', delay: 0.3 }}
-                >
-                  <svg className="w-6 h-6 text-[#FEBE5D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                  </svg>
-                </motion.div>
+                <svg className="w-6 h-6 text-[#FEBE5D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
               </motion.div>
             </div>
           </motion.div>
@@ -284,9 +271,15 @@ const Homepage = () => {
                 className="absolute inset-0 bg-[#FEBE5D]/10 -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"
               />
             </motion.a>
+            
           </motion.div>
         </div>
       </motion.section>
+
+      {/* Fading Divider */}
+      <div className="w-full flex justify-center my-12">
+        <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEBE5D] to-transparent opacity-70" />
+      </div>
 
       {/* Newsletter Signup Section */}
       <motion.section 
@@ -295,14 +288,7 @@ const Homepage = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 1.5 }}
       >
-        {/* Animated Divider */}
-        <motion.div
-          className="w-24 h-1 rounded-full bg-[#FEBE5D] mb-10 animate-pulse"
-          initial={{ scaleX: 0 }}
-          animate={{ scaleX: 1 }}
-          transition={{ duration: 1, delay: 1.2 }}
-          style={{ originX: 0.5 }}
-        />
+        
         <div className="max-w-2xl w-full mx-auto text-center">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4 tracking-tight">
             Newsletter Signup
