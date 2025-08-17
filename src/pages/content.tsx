@@ -136,8 +136,8 @@ const Content = () => {
                     {/* Main Content */}
                     <div className="text-center space-y-4">
                       <h2 
-                        className="text-3xl md:text-4xl font-bold text-[#FEBE5D] leading-tight group-hover:scale-105 transition-transform duration-300"
-                        style={{ fontFamily: 'Playfair Display, serif' }}
+                        className="text-3xl md:text-4xl font-bold leading-tight group-hover:scale-105 transition-transform duration-300"
+                        style={{ fontFamily: 'Playfair Display, serif', color: '#FEDE5B' }}
                       >
                         {vertical.title}
                       </h2>
@@ -228,8 +228,8 @@ const Content = () => {
                     {/* Main Content */}
                     <div className="text-center space-y-4">
                       <h2 
-                        className="text-3xl md:text-4xl font-bold text-[#FEBE5D] leading-tight group-hover:scale-105 transition-transform duration-300"
-                        style={{ fontFamily: 'Playfair Display, serif' }}
+                        className="text-3xl md:text-4xl font-bold leading-tight group-hover:scale-105 transition-transform duration-300"
+                        style={{ fontFamily: 'Playfair Display, serif', color: '#FEDE5B' }}
                       >
                         {vertical.title}
                       </h2>
