@@ -25,7 +25,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #FEBE5D;
+  background: #FEDE5B;
   border-radius: 3px;
 }
 
@@ -41,6 +41,6 @@ video {
 /* Focus states for accessibility */
 button:focus,
 a:focus {
-  outline: 2px solid #FEBE5D;
+  outline: 2px solid #FEDE5B;
   outline-offset: 2px;
 }

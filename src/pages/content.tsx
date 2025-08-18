@@ -63,7 +63,7 @@ const Content = () => {
             className="text-5xl md:text-7xl font-bold text-white mb-6"
             style={{ fontFamily: 'Playfair Display, serif' }}
           >
-            Content <span className="text-[#FEBE5D]">Series</span>
+            Content <span className="text-[#FEDE5B]">Series</span>
           </motion.h1>
           <motion.p
             initial={{ y: 30, opacity: 0 }}
@@ -79,7 +79,7 @@ const Content = () => {
 
         {/* Fading line divider */}
       <div className="w-full flex justify-center my-12">
-        <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEBE5D] to-transparent opacity-70" />
+        <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEDE5B] to-transparent opacity-70" />
       </div>
 
         {/* Content Verticals */}
@@ -128,7 +128,7 @@ const Content = () => {
                     {/* Icon */}
                     <div className="flex justify-center">
                       <vertical.icon 
-                        className="text-[#F5F5F5] group-hover:text-[#FEBE5D] transition-colors duration-300" 
+                        className="text-[#F5F5F5] group-hover:text-[#FEDE5B] transition-colors duration-300" 
                         size={48} 
                       />
                     </div>
@@ -167,7 +167,7 @@ const Content = () => {
 
                     {/* Bottom Accent */}
                     <div className="flex justify-center">
-                      <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-[#FEBE5D] to-transparent opacity-70 group-hover:w-24 transition-all duration-500" />
+                      <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-[#FEDE5B] to-transparent opacity-70 group-hover:w-24 transition-all duration-500" />
                     </div>
                   </div>
 
@@ -220,7 +220,7 @@ const Content = () => {
                     {/* Icon */}
                     <div className="flex justify-center">
                       <vertical.icon 
-                        className="text-[#F5F5F5] group-hover:text-[#FEBE5D] transition-colors duration-300" 
+                        className="text-[#F5F5F5] group-hover:text-[#FEDE5B] transition-colors duration-300" 
                         size={48} 
                       />
                     </div>
@@ -259,7 +259,7 @@ const Content = () => {
 
                     {/* Bottom Accent */}
                     <div className="flex justify-center">
-                      <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-[#FEBE5D] to-transparent opacity-70 group-hover:w-24 transition-all duration-500" />
+                      <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-[#FEDE5B] to-transparent opacity-70 group-hover:w-24 transition-all duration-500" />
                     </div>
                   </div>
 
@@ -273,7 +273,7 @@ const Content = () => {
 
         {/* Fading line divider */}
       <div className="w-full flex justify-center my-12">
-        <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEBE5D] to-transparent opacity-70" />
+        <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEDE5B] to-transparent opacity-70" />
       </div>
     </motion.div>
   );

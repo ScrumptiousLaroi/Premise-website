@@ -171,7 +171,7 @@ const KalaRooms = () => {
       <section className="py-20 px-4 bg-black">
         {/* Fading Divider */}
         <div className="w-full flex justify-center my-12">
-          <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEBE5D] to-transparent opacity-70" />
+          <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEDE5B] to-transparent opacity-70" />
         </div>
         
         <div className="max-w-7xl mx-auto">
@@ -223,7 +223,7 @@ const KalaRooms = () => {
       <section className="py-20 px-4 bg-black">
         {/* Fading Divider */}
         <div className="w-full flex justify-center my-12">
-          <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEBE5D] to-transparent opacity-70" />
+          <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEDE5B] to-transparent opacity-70" />
         </div>
         
         <div className="max-w-4xl mx-auto text-center">

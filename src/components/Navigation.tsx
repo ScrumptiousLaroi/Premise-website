@@ -62,8 +62,8 @@ const Navigation = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`text-sm font-medium transition-colors duration-300 hover:text-[#FEBE5D] ${
-                  location.pathname === item.path ? 'text-[#FEBE5D]' : 'text-white'
+                className={`text-sm font-medium transition-colors duration-300 hover:text-[#FEDE5B] ${
+                  location.pathname === item.path ? 'text-[#FEDE5B]' : 'text-white'
                 }`}
               >
                 {item.name}
@@ -74,7 +74,7 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden text-white hover:text-[#FEBE5D] transition-colors duration-300"
+            className="md:hidden text-white hover:text-[#FEDE5B] transition-colors duration-300"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -97,8 +97,8 @@ const Navigation = () => {
                   key={item.path}
                   to={item.path}
                   onClick={() => setIsOpen(false)}
-                  className={`block text-lg font-medium transition-colors duration-300 hover:text-[#FEBE5D] ${
-                    location.pathname === item.path ? 'text-[#FEBE5D]' : 'text-white'
+                  className={`block text-lg font-medium transition-colors duration-300 hover:text-[#FEDE5B] ${
+                    location.pathname === item.path ? 'text-[#FEDE5B]' : 'text-white'
                   }`}
                 >
                   {item.name}

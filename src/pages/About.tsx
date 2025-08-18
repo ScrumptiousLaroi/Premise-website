@@ -32,28 +32,28 @@ const About = () => {
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-12">
-            WHY <span className="text-[#FEBE5D]">PREMISE.</span>?
+            WHY <span className="text-[#FEDE5B]">PREMISE.</span>?
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {/* For Music Lovers */}
-            <div className="bg-black border border-[#FEBE5D] rounded-3xl shadow-xl flex flex-col items-center px-8 py-10 text-center">
-              <h3 className="text-2xl font-bold text-[#FEBE5D] mb-4 uppercase tracking-wide">For Music Lovers</h3>
+            <div className="bg-black border border-[#FEDE5B] rounded-3xl shadow-xl flex flex-col items-center px-8 py-10 text-center">
+              <h3 className="text-2xl font-bold text-[#FEDE5B] mb-4 uppercase tracking-wide">For Music Lovers</h3>
               <p className="text-lg text-white font-light text-justify">
                 Stop consuming. Start connecting.<br />
                 We show you the story behind every song.
               </p>
             </div>
             {/* For Artists */}
-            <div className="bg-black border border-[#FEBE5D] rounded-3xl shadow-xl flex flex-col items-center px-8 py-10 text-center">
-              <h3 className="text-2xl font-bold text-[#FEBE5D] mb-4 uppercase tracking-wide">For Artists</h3>
+            <div className="bg-black border border-[#FEDE5B] rounded-3xl shadow-xl flex flex-col items-center px-8 py-10 text-center">
+              <h3 className="text-2xl font-bold text-[#FEDE5B] mb-4 uppercase tracking-wide">For Artists</h3>
               <p className="text-lg text-white font-light text-justify">
                 <br></br>Stop being just another name in a playlist.<br />
                 We make sure your story gets told.
               </p>
             </div>
             {/* For the Culture */}
-            <div className="bg-black border border-[#FEBE5D] rounded-3xl shadow-xl flex flex-col items-center px-8 py-10 text-center">
-              <h3 className="text-2xl font-bold text-[#FEBE5D] mb-4 uppercase tracking-wide">For the Culture</h3>
+            <div className="bg-black border border-[#FEDE5B] rounded-3xl shadow-xl flex flex-col items-center px-8 py-10 text-center">
+              <h3 className="text-2xl font-bold text-[#FEDE5B] mb-4 uppercase tracking-wide">For the Culture</h3>
               <p className="text-lg text-white font-light text-justify">
                 Stop letting history disappear.<br />
                 We're preserving it for the next generation.
@@ -64,7 +64,7 @@ const About = () => {
       </section>
       {/* Fading line divider */}
       <div className="w-full flex justify-center my-12">
-        <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEBE5D] to-transparent opacity-70" />
+        <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEDE5B] to-transparent opacity-70" />
       </div>
       {/* Who We Are (restored below WHY PREMISE.) */}
       <section className="py-20 px-4">
@@ -73,7 +73,7 @@ const About = () => {
             Who We Are
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
-            <span className="font-bold text-[#FEBE5D]">PREMISE.</span> is a music media brand with a simple belief:<br/>
+            <span className="font-bold text-[#FEDE5B]">PREMISE.</span> is a music media brand with a simple belief:<br/>
             The person behind the music is just as powerful as the music itself.
           </p>
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-4">
@@ -83,7 +83,7 @@ const About = () => {
       </section>
       {/* Fading line divider */}
       <div className="w-full flex justify-center my-12">
-        <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEBE5D] to-transparent opacity-70" />
+        <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEDE5B] to-transparent opacity-70" />
       </div>
 
       {/* What We Do */}
@@ -98,7 +98,7 @@ const About = () => {
       </section>
       {/* Fading line divider */}
       <div className="w-full flex justify-center my-12">
-        <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEBE5D] to-transparent opacity-70" />
+        <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEDE5B] to-transparent opacity-70" />
       </div>
 
       {/* Our Mission */}
@@ -110,7 +110,7 @@ const About = () => {
           </p>
           <div className="grid grid-cols-2 md:grid-cols-2 gap-8 mb-12">
             <div className="text-center">
-              <div className="text-[#FEBE5D] mb-4 flex justify-center">
+              <div className="text-[#FEDE5B] mb-4 flex justify-center">
                 <Music size={32} />
               </div>
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">
@@ -121,7 +121,7 @@ const About = () => {
               </div>
             </div>
             <div className="text-center">
-              <div className="text-[#FEBE5D] mb-4 flex justify-center">
+              <div className="text-[#FEDE5B] mb-4 flex justify-center">
                 <Users size={32} />
               </div>
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">
@@ -136,7 +136,7 @@ const About = () => {
       </section>
       {/* Fading line divider */}
       <div className="w-full flex justify-center my-12">
-        <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEBE5D] to-transparent opacity-70" />
+        <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEDE5B] to-transparent opacity-70" />
       </div>
 
       {/* Team Section */}
@@ -151,7 +151,7 @@ const About = () => {
           >
             <h2 className="text-4xl font-bold mb-8">
               <span className="text-white">The </span>
-              <span className="text-[#FEBE5D]">Team</span>
+              <span className="text-[#FEDE5B]">Team</span>
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Meet the passionate individuals working behind the scenes to bring you 
@@ -181,7 +181,7 @@ const About = () => {
                   </div>
                 </a>
                 <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
-                <p className="text-[#FEBE5D] font-medium mb-3">{member.role}</p>
+                <p className="text-[#FEDE5B] font-medium mb-3">{member.role}</p>
                 <p className="text-gray-400 text-sm">{member.description}</p>
               </motion.div>
             ))}
@@ -193,40 +193,40 @@ const About = () => {
       {/* JOIN THE JOURNEY Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black flex flex-col items-center">
         <h2 className="text-4xl sm:text-5xl font-black mb-6 tracking-tight uppercase text-center flex flex-col items-center">
-          <span className="text-white">Join the <span className="text-[#FEBE5D]">Journey</span></span>
-          <span className="block w-32 h-1 mt-3 rounded-full bg-gradient-to-r from-transparent via-[#FEBE5D] to-transparent opacity-70" />
+          <span className="text-white">Join the <span className="text-[#FEDE5B]">Journey</span></span>
+          <span className="block w-32 h-1 mt-3 rounded-full bg-gradient-to-r from-transparent via-[#FEDE5B] to-transparent opacity-70" />
         </h2>
         <div className="max-w-5xl w-full grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* For Artists */}
-          <div className="bg-black border border-[#FEBE5D] rounded-3xl shadow-xl flex flex-col items-center px-8 py-12 text-center">
-            <h3 className="text-2xl font-bold text-[#FEBE5D] mb-4 uppercase tracking-wide">For Artists</h3>
+          <div className="bg-black border border-[#FEDE5B] rounded-3xl shadow-xl flex flex-col items-center px-8 py-12 text-center">
+            <h3 className="text-2xl font-bold text-[#FEDE5B] mb-4 uppercase tracking-wide">For Artists</h3>
             <p className="text-lg text-gray-300 mb-8 font-light">
               Ready to share your story?<br/>
               We're looking for artists who have something real to say. Not perfect stories, authentic ones.
             </p>
-            <button className="px-8 py-3 bg-[#FEBE5D] text-black font-bold rounded-full hover:bg-white transition-all duration-300 shadow-lg text-lg">
+            <button className="px-8 py-3 bg-[#FEDE5B] text-black font-bold rounded-full hover:bg-white transition-all duration-300 shadow-lg text-lg">
               <a href="https://forms.gle/f8snyubTitjMS8pS6" target="_blank" rel="noopener noreferrer">Get Featured</a>
             </button>
           </div>
           {/* For Fans */}
-          <div className="bg-black border border-[#FEBE5D] rounded-3xl shadow-xl flex flex-col items-center px-8 py-12 text-center">
-            <h3 className="text-2xl font-bold text-[#FEBE5D] mb-4 uppercase tracking-wide">For Fans</h3>
+          <div className="bg-black border border-[#FEDE5B] rounded-3xl shadow-xl flex flex-col items-center px-8 py-12 text-center">
+            <h3 className="text-2xl font-bold text-[#FEDE5B] mb-4 uppercase tracking-wide">For Fans</h3>
             <p className="text-lg text-gray-300 mb-8 font-light">
               Want deeper connections with music?<br/>
               Join a community that values the journey as much as the destination.
             </p>
-            <button className="px-8 py-3 bg-[#FEBE5D] text-black font-bold rounded-full hover:bg-white transition-all duration-300 shadow-lg text-lg">
+            <button className="px-8 py-3 bg-[#FEDE5B] text-black font-bold rounded-full hover:bg-white transition-all duration-300 shadow-lg text-lg">
               <a href="https://www.instagram.com/premise_in/" target="_blank" rel="noopener noreferrer">Follow Our Stories</a>
             </button>
           </div>
           {/* For Collaborators */}
-          <div className="bg-black border border-[#FEBE5D] rounded-3xl shadow-xl flex flex-col items-center px-8 py-12 text-center">
-            <h3 className="text-2xl font-bold text-[#FEBE5D] mb-4 uppercase tracking-wide">For Collaborators</h3>
+          <div className="bg-black border border-[#FEDE5B] rounded-3xl shadow-xl flex flex-col items-center px-8 py-12 text-center">
+            <h3 className="text-2xl font-bold text-[#FEDE5B] mb-4 uppercase tracking-wide">For Collaborators</h3>
             <p className="text-lg text-gray-300 mb-8 font-light">
               Believe in authentic storytelling?<br/>
               Let's build something meaningful together.
             </p>
-            <a href="mailto:hello@premise.co.in" className="px-8 py-3 bg-[#FEBE5D] text-black font-bold rounded-full hover:bg-white transition-all duration-300 shadow-lg text-lg">
+            <a href="mailto:hello@premise.co.in" className="px-8 py-3 bg-[#FEDE5B] text-black font-bold rounded-full hover:bg-white transition-all duration-300 shadow-lg text-lg">
               Work With Us
             </a>
           </div>
@@ -235,7 +235,7 @@ const About = () => {
 
       {/* Add fading line between all main sections */}
       <div className="w-full flex justify-center my-12">
-        <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEBE5D] to-transparent opacity-70" />
+        <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEDE5B] to-transparent opacity-70" />
       </div>
     </motion.div>
   );
