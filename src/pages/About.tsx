@@ -32,7 +32,7 @@ const About = () => {
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-12">
-            WHY <span className="text-[#FEDE5B]">PREMISE.</span>?
+            WHY <span className="text-[#FEDE5B] font-impact">PREMISE.</span>?
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {/* For Music Lovers */}
@@ -73,7 +73,7 @@ const About = () => {
             Who We Are
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
-            <span className="font-bold text-[#FEDE5B]">PREMISE.</span> is a music media brand with a simple belief:<br/>
+            <span className="font-bold text-[#FEDE5B] font-impact">PREMISE.</span> is a music media brand with a simple belief:<br/>
             The person behind the music is just as powerful as the music itself.
           </p>
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-4">

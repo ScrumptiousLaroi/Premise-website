@@ -13,7 +13,7 @@ const Footer = () => (
   <footer className="bg-black text-gray-300 pt-12 pb-6 px-4 border-t border-gray-800 mt-16">
     <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between md:items-center gap-8">
       <div className="mb-6 md:mb-0 text-center md:text-left">
-        <h2 className="text-2xl font-bold text-[#FEDE5B] tracking-wide mb-2">PREMISE.</h2>
+        <h2 className="text-2xl font-bold text-[#FEDE5B] tracking-wide mb-2 font-impact">PREMISE.</h2>
         <p className="text-base mb-2">Documenting the true face of Indian music, one story at a time.</p>
       </div>
       <div className="flex flex-col items-center md:items-end gap-4">
@@ -43,7 +43,7 @@ const Footer = () => (
       </div>
     </div>
     <div className="mt-8 text-center text-xs text-gray-600">
-      © 2025 PREMISE. All Stories Reserved.
+      © 2025 <span className="font-impact">PREMISE.</span> All Stories Reserved.
     </div>
   </footer>
 );
