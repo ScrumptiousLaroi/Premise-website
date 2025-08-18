@@ -6,6 +6,11 @@
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
+/* Impact font utility class */
+.font-impact {
+  font-family: 'Impact', 'Arial Black', sans-serif;
+}
+
 html {
   scroll-behavior: smooth;
 }
