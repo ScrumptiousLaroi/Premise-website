@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
 
 // Extend Window interface for Instagram embed
 declare global {
@@ -12,6 +13,62 @@ declare global {
 }
 
 const Homepage = () => {
+  // State for managing video playback
+  const [visibleVideos, setVisibleVideos] = useState<Set<string>>(new Set());
+  const videoRefs = useRef<{ [key: string]: HTMLVideoElement | null }>({});
+
+  // Intersection Observer for video viewport detection
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const videoId = entry.target.getAttribute('data-video-id');
+          if (!videoId) return;
+
+          const video = videoRefs.current[videoId];
+          if (!video) return;
+
+          if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+            // Video is in viewport - play it
+            setVisibleVideos(prev => new Set(prev).add(videoId));
+            video.play().catch((error) => {
+              // Handle autoplay restrictions gracefully
+              console.log('Video autoplay failed:', error);
+            });
+          } else {
+            // Video is out of viewport - pause it
+            setVisibleVideos(prev => {
+              const newSet = new Set(prev);
+              newSet.delete(videoId);
+              return newSet;
+            });
+            video.pause();
+          }
+        });
+      },
+      {
+        threshold: [0, 0.5, 1], // Trigger when 50% visible
+        rootMargin: '-10% 0px -10% 0px' // Slightly reduce viewport to ensure smooth transitions
+      }
+    );
+
+    // Observe all video elements
+    Object.entries(videoRefs.current).forEach(([videoId, videoElement]) => {
+      if (videoElement) {
+        observer.observe(videoElement);
+      }
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  // Function to register video refs
+  const setVideoRef = (videoId: string) => (el: HTMLVideoElement | null) => {
+    videoRefs.current[videoId] = el;
+  };
+
   // Local videos from the videos folder
   const localVideos = [
     {
@@ -86,11 +143,12 @@ const Homepage = () => {
         {/* Background Video */}
         <div className="absolute inset-0 z-0">
           <video
-            autoPlay
+            ref={setVideoRef('hero-bg')}
+            data-video-id="hero-bg"
+            className="w-full h-full object-cover opacity-60"
             muted
             loop
             playsInline
-            className="w-full h-full object-cover opacity-60"
             poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080' viewBox='0 0 1920 1080'%3E%3Crect width='1920' height='1080' fill='%23000000'/%3E%3C/svg%3E"
           >
             <source src="./premise-bg.mp4" type="video/mp4" />
@@ -191,8 +249,9 @@ const Homepage = () => {
               >
                 {/* Video Element */}
                 <video
+                  ref={setVideoRef(video.id)}
+                  data-video-id={video.id}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  autoPlay
                   muted
                   loop
                   playsInline
