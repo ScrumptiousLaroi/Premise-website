@@ -9,7 +9,7 @@ const Content = () => {
       tagline: 'Their story. Their words. Their truth.',
       quote: 'Because the best stories don\'t need long introductions.',
       description: 'Raw, unfiltered intimacy. A confession.',
-      backgroundImage: './content/90_sec_ankur_tewari.jpg',
+      backgroundImage: './content/90_sec.jpeg',
       icon: Mic,
       aesthetic: 'Extreme close-up on lips, about to speak'
     },
@@ -19,7 +19,7 @@ const Content = () => {
       tagline: 'The legends they never told you about.',
       quote: 'History isn\'t just facts. It\'s feelings.',
       description: 'Historical reverence. Uncovering forgotten legends.',
-      backgroundImage: 'https://images.pexels.com/photos/164693/pexels-photo-164693.jpeg',
+      backgroundImage: './content/indian_ocean.jpg',
       icon: History,
       aesthetic: 'Vintage microphone, dust motes, sepia memories'
     },
@@ -29,7 +29,7 @@ const Content = () => {
       tagline: 'Your next musical obsession, curated.',
       quote: 'Great music doesn\'t need permission to move you.',
       description: 'Modern discovery. The thrill of the new and unknown.',
-      backgroundImage: 'https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg',
+      backgroundImage: './content/add_them.jpeg',
       icon: Music,
       aesthetic: 'Rainy window, neon lights, earbuds dangling'
     },
@@ -39,7 +39,7 @@ const Content = () => {
       tagline: 'Where music meets magic.',
       quote: 'Some moments can\'t be streamed. They have to be lived.',
       description: 'Sacred space. The magic of live, intimate connection.',
-      backgroundImage: 'https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg',
+      backgroundImage: './content/kala_rooms.jpeg',
       icon: Users,
       aesthetic: 'Guitar neck, fingertips on strings, candlelight'
     }

@@ -266,17 +266,18 @@ const KalaRooms = () => {
           >
             Share your music with the world in our intimate studio setting. Let us capture your authentic sound and story.
           </motion.p>
-          <motion.button
+          <motion.a
+            href="mailto:hello@premise.co.in"
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
-            className="bg-red-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-700 transition-colors duration-300 shadow-lg hover:shadow-xl"
+            className="inline-block bg-red-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-700 transition-colors duration-300 shadow-lg hover:shadow-xl"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             Request a Session
-          </motion.button>
+          </motion.a>
         </div>
       </section>
 
