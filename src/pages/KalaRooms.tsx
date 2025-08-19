@@ -122,7 +122,7 @@ const KalaRooms = () => {
             playsInline
             className="w-full h-full object-cover"
           >
-            <source src="./premise-bg.mp4" type="video/mp4" />
+            <source src="./kalarooms/kalarooms_bg.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           {/* Dark gradient overlay */}
@@ -134,7 +134,7 @@ const KalaRooms = () => {
           <motion.h1
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.3 }}
+            transition={{ duration: 1, delay: 2.3 }}
             className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tight leading-none mb-6"
           >
             <span className="text-white">कला</span>{' '}
@@ -143,7 +143,7 @@ const KalaRooms = () => {
           <motion.p
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.6 }}
+            transition={{ duration: 1, delay: 2.6 }}
             className="text-xl sm:text-2xl md:text-3xl text-gray-200 font-light max-w-3xl mx-auto"
           >
             Where music meets magic in intimate spaces
