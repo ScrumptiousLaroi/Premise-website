@@ -267,7 +267,7 @@ const KalaRooms = () => {
             Share your music with the world in our intimate studio setting. Let us capture your authentic sound and story.
           </motion.p>
           <motion.a
-            href="osgoyal@premise.co.in"
+            href="mailto:osgoyal@premise.co.in"
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
