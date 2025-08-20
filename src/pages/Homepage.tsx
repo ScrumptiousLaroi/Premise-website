@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
 
 // Extend Window interface for Instagram embed
 declare global {
@@ -12,6 +13,62 @@ declare global {
 }
 
 const Homepage = () => {
+  // State for managing video playback
+  const [visibleVideos, setVisibleVideos] = useState<Set<string>>(new Set());
+  const videoRefs = useRef<{ [key: string]: HTMLVideoElement | null }>({});
+
+  // Intersection Observer for video viewport detection
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const videoId = entry.target.getAttribute('data-video-id');
+          if (!videoId) return;
+
+          const video = videoRefs.current[videoId];
+          if (!video) return;
+
+          if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+            // Video is in viewport - play it
+            setVisibleVideos(prev => new Set(prev).add(videoId));
+            video.play().catch((error) => {
+              // Handle autoplay restrictions gracefully
+              console.log('Video autoplay failed:', error);
+            });
+          } else {
+            // Video is out of viewport - pause it
+            setVisibleVideos(prev => {
+              const newSet = new Set(prev);
+              newSet.delete(videoId);
+              return newSet;
+            });
+            video.pause();
+          }
+        });
+      },
+      {
+        threshold: [0, 0.5, 1], // Trigger when 50% visible
+        rootMargin: '-10% 0px -10% 0px' // Slightly reduce viewport to ensure smooth transitions
+      }
+    );
+
+    // Observe all video elements
+    Object.entries(videoRefs.current).forEach(([videoId, videoElement]) => {
+      if (videoElement) {
+        observer.observe(videoElement);
+      }
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  // Function to register video refs
+  const setVideoRef = (videoId: string) => (el: HTMLVideoElement | null) => {
+    videoRefs.current[videoId] = el;
+  };
+
   // Local videos from the videos folder
   const localVideos = [
     {
@@ -86,11 +143,12 @@ const Homepage = () => {
         {/* Background Video */}
         <div className="absolute inset-0 z-0">
           <video
-            autoPlay
+            ref={setVideoRef('hero-bg')}
+            data-video-id="hero-bg"
+            className="w-full h-full object-cover opacity-60"
             muted
             loop
             playsInline
-            className="w-full h-full object-cover opacity-60"
             poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080' viewBox='0 0 1920 1080'%3E%3Crect width='1920' height='1080' fill='%23000000'/%3E%3C/svg%3E"
           >
             <source src="./premise-bg.mp4" type="video/mp4" />
@@ -108,7 +166,7 @@ const Homepage = () => {
             transition={{ duration: 1, delay: 0.3 }}
             className="flex flex-col items-center justify-center w-full h-full space-y-6 md:space-y-8"
           >
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-[#FEBE5D] leading-none w-full flex justify-center items-center">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-[#FEDE5B] leading-none w-full flex justify-center items-center">
               <span className="block w-full text-center">PREMISE.</span>
             </h1>
             <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white font-light max-w-3xl mx-auto w-full text-center">
@@ -121,7 +179,7 @@ const Homepage = () => {
                 transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
                 onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
               >
-                <svg className="w-6 h-6 text-[#FEBE5D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-[#FEDE5B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
               </motion.div>
@@ -149,16 +207,16 @@ const Homepage = () => {
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-white relative z-10">
                 Featured{' '}
                 <span className="relative">
-                  <span className="text-[#FEBE5D]">Artists</span>
+                  <span className="text-[#FEDE5B]">Artists</span>
                   <motion.div
-                    className="absolute -bottom-2 left-0 w-full h-1 bg-[#FEBE5D]"
+                    className="absolute -bottom-2 left-0 w-full h-1 bg-[#FEDE5B]"
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
                     transition={{ duration: 1, delay: 1 }}
                   />
                 </span>
               </h2>
-              <div className="absolute top-0 left-0 text-6xl opacity-10 font-black text-[#FEBE5D] -rotate-12 hidden lg:block">
+              <div className="absolute top-0 left-0 text-6xl opacity-10 font-black text-[#FEDE5B] -rotate-12 hidden lg:block">
                 ♫
               </div>
             </div>
@@ -191,8 +249,9 @@ const Homepage = () => {
               >
                 {/* Video Element */}
                 <video
+                  ref={setVideoRef(video.id)}
+                  data-video-id={video.id}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  autoPlay
                   muted
                   loop
                   playsInline
@@ -207,7 +266,7 @@ const Homepage = () => {
 
                 {/* Content Overlay */}
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                  <h3 className="text-xl sm:text-2xl font-bold mb-2 text-[#FEBE5D]">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2 text-[#FEDE5B]">
                     {video.title}
                   </h3>
                   <p className="text-sm sm:text-base text-gray-200 opacity-90">
@@ -218,22 +277,22 @@ const Homepage = () => {
                 {/* Play Icon Overlay */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <motion.div
-                    className="w-16 h-16 bg-black/60 backdrop-blur-sm rounded-full border-2 border-[#FEBE5D] flex items-center justify-center"
+                    className="w-16 h-16 bg-black/60 backdrop-blur-sm rounded-full border-2 border-[#FEDE5B] flex items-center justify-center"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   >
-                    <svg className="w-8 h-8 text-[#FEBE5D] ml-1" fill="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-8 h-8 text-[#FEDE5B] ml-1" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M8 5v14l11-7z"/>
                     </svg>
                   </motion.div>
                 </div>
 
                 {/* Decorative Border */}
-                <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-[#FEBE5D]/30 transition-all duration-300" />
+                <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-[#FEDE5B]/30 transition-all duration-300" />
                 
                 {/* Corner Accent */}
                 <div className="absolute top-4 right-4">
-                  <div className="w-3 h-3 bg-[#FEBE5D] rounded-full animate-pulse"></div>
+                  <div className="w-3 h-3 bg-[#FEDE5B] rounded-full animate-pulse"></div>
                 </div>
               </motion.div>
             ))}
@@ -250,7 +309,7 @@ const Homepage = () => {
               href="https://www.instagram.com/premise_in/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative inline-flex items-center gap-3 px-8 py-4 bg-transparent border-2 border-[#FEBE5D] text-[#FEBE5D] rounded-full font-medium hover:bg-[#FEBE5D] hover:text-black transition-all duration-500 overflow-hidden"
+              className="group relative inline-flex items-center gap-3 px-8 py-4 bg-transparent border-2 border-[#FEDE5B] text-[#FEDE5B] rounded-full font-medium hover:bg-[#FEDE5B] hover:text-black transition-all duration-500 overflow-hidden"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -268,7 +327,7 @@ const Homepage = () => {
               
               {/* Animated background effect */}
               <motion.div
-                className="absolute inset-0 bg-[#FEBE5D]/10 -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"
+                className="absolute inset-0 bg-[#FEDE5B]/10 -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"
               />
             </motion.a>
             
@@ -278,7 +337,7 @@ const Homepage = () => {
 
       {/* Fading Divider */}
       <div className="w-full flex justify-center my-12">
-        <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEBE5D] to-transparent opacity-70" />
+        <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEDE5B] to-transparent opacity-70" />
       </div>
 
       {/* Newsletter Signup Section */}
@@ -302,11 +361,11 @@ const Homepage = () => {
               type="email"
               required
               placeholder="Your email address"
-              className="w-full sm:w-auto px-6 py-3 rounded-full bg-gray-900 text-white border border-gray-700 focus:outline-none focus:border-[#FEBE5D] transition-all duration-300 placeholder-gray-500"
+              className="w-full sm:w-auto px-6 py-3 rounded-full bg-gray-900 text-white border border-gray-700 focus:outline-none focus:border-[#FEDE5B] transition-all duration-300 placeholder-gray-500"
             />
             <button
               type="submit"
-              className="px-8 py-3 bg-[#FEBE5D] text-black font-bold rounded-full hover:bg-white transition-all duration-300 shadow-lg text-lg"
+              className="px-8 py-3 bg-[#FEDE5B] text-black font-bold rounded-full hover:bg-white transition-all duration-300 shadow-lg text-lg"
             >
               Subscribe
             </button>

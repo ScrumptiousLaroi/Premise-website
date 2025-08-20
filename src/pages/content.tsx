@@ -9,7 +9,7 @@ const Content = () => {
       tagline: 'Their story. Their words. Their truth.',
       quote: 'Because the best stories don\'t need long introductions.',
       description: 'Raw, unfiltered intimacy. A confession.',
-      backgroundImage: './content/90_sec_ankur_tewari.jpg',
+      backgroundImage: './content/90_sec.jpeg',
       icon: Mic,
       aesthetic: 'Extreme close-up on lips, about to speak'
     },
@@ -19,7 +19,7 @@ const Content = () => {
       tagline: 'The legends they never told you about.',
       quote: 'History isn\'t just facts. It\'s feelings.',
       description: 'Historical reverence. Uncovering forgotten legends.',
-      backgroundImage: 'https://images.pexels.com/photos/164693/pexels-photo-164693.jpeg',
+      backgroundImage: './content/indian_ocean.jpg',
       icon: History,
       aesthetic: 'Vintage microphone, dust motes, sepia memories'
     },
@@ -29,7 +29,7 @@ const Content = () => {
       tagline: 'Your next musical obsession, curated.',
       quote: 'Great music doesn\'t need permission to move you.',
       description: 'Modern discovery. The thrill of the new and unknown.',
-      backgroundImage: 'https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg',
+      backgroundImage: './content/add_them.jpeg',
       icon: Music,
       aesthetic: 'Rainy window, neon lights, earbuds dangling'
     },
@@ -39,7 +39,7 @@ const Content = () => {
       tagline: 'Where music meets magic.',
       quote: 'Some moments can\'t be streamed. They have to be lived.',
       description: 'Sacred space. The magic of live, intimate connection.',
-      backgroundImage: 'https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg',
+      backgroundImage: './content/kala_rooms.jpeg',
       icon: Users,
       aesthetic: 'Guitar neck, fingertips on strings, candlelight'
     }
@@ -63,7 +63,7 @@ const Content = () => {
             className="text-5xl md:text-7xl font-bold text-white mb-6"
             style={{ fontFamily: 'Playfair Display, serif' }}
           >
-            Content <span className="text-[#FEBE5D]">Series</span>
+            Content <span className="text-[#FEDE5B]">Series</span>
           </motion.h1>
           <motion.p
             initial={{ y: 30, opacity: 0 }}
@@ -79,7 +79,7 @@ const Content = () => {
 
         {/* Fading line divider */}
       <div className="w-full flex justify-center my-12">
-        <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEBE5D] to-transparent opacity-70" />
+        <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEDE5B] to-transparent opacity-70" />
       </div>
 
         {/* Content Verticals */}
@@ -128,7 +128,7 @@ const Content = () => {
                     {/* Icon */}
                     <div className="flex justify-center">
                       <vertical.icon 
-                        className="text-[#F5F5F5] group-hover:text-[#FEBE5D] transition-colors duration-300" 
+                        className="text-[#F5F5F5] group-hover:text-[#FEDE5B] transition-colors duration-300" 
                         size={48} 
                       />
                     </div>
@@ -167,7 +167,7 @@ const Content = () => {
 
                     {/* Bottom Accent */}
                     <div className="flex justify-center">
-                      <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-[#FEBE5D] to-transparent opacity-70 group-hover:w-24 transition-all duration-500" />
+                      <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-[#FEDE5B] to-transparent opacity-70 group-hover:w-24 transition-all duration-500" />
                     </div>
                   </div>
 
@@ -220,7 +220,7 @@ const Content = () => {
                     {/* Icon */}
                     <div className="flex justify-center">
                       <vertical.icon 
-                        className="text-[#F5F5F5] group-hover:text-[#FEBE5D] transition-colors duration-300" 
+                        className="text-[#F5F5F5] group-hover:text-[#FEDE5B] transition-colors duration-300" 
                         size={48} 
                       />
                     </div>
@@ -259,7 +259,7 @@ const Content = () => {
 
                     {/* Bottom Accent */}
                     <div className="flex justify-center">
-                      <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-[#FEBE5D] to-transparent opacity-70 group-hover:w-24 transition-all duration-500" />
+                      <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-[#FEDE5B] to-transparent opacity-70 group-hover:w-24 transition-all duration-500" />
                     </div>
                   </div>
 
@@ -273,7 +273,7 @@ const Content = () => {
 
         {/* Fading line divider */}
       <div className="w-full flex justify-center my-12">
-        <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEBE5D] to-transparent opacity-70" />
+        <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEDE5B] to-transparent opacity-70" />
       </div>
     </motion.div>
   );

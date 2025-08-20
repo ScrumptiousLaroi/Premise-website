@@ -1,8 +1,28 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Play } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Play, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const KalaRooms = () => {
+  // State for image modal
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
+
+  // Navigation functions for image modal
+  const goToPrevious = () => {
+    if (selectedImageIndex !== null) {
+      setSelectedImageIndex(selectedImageIndex === 0 ? galleryImages.length - 1 : selectedImageIndex - 1);
+    }
+  };
+
+  const goToNext = () => {
+    if (selectedImageIndex !== null) {
+      setSelectedImageIndex(selectedImageIndex === galleryImages.length - 1 ? 0 : selectedImageIndex + 1);
+    }
+  };
+
+  const closeModal = () => {
+    setSelectedImageIndex(null);
+  };
+
   // Gallery images from kalarooms folder
   const galleryImages = [
     {
@@ -102,7 +122,7 @@ const KalaRooms = () => {
             playsInline
             className="w-full h-full object-cover"
           >
-            <source src="./premise-bg.mp4" type="video/mp4" />
+            <source src="./kalarooms/kalarooms_bg.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           {/* Dark gradient overlay */}
@@ -114,16 +134,16 @@ const KalaRooms = () => {
           <motion.h1
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.3 }}
+            transition={{ duration: 1, delay: 2.3 }}
             className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tight leading-none mb-6"
           >
             <span className="text-white">कला</span>{' '}
-            <span className="text-red-600">Rooms</span>
+            <span className="text-red-600 font-impact">Rooms</span>
           </motion.h1>
           <motion.p
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.6 }}
+            transition={{ duration: 1, delay: 2.6 }}
             className="text-xl sm:text-2xl md:text-3xl text-gray-200 font-light max-w-3xl mx-auto"
           >
             Where music meets magic in intimate spaces
@@ -153,7 +173,8 @@ const KalaRooms = () => {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group relative overflow-hidden rounded-lg aspect-square"
+                className="group relative overflow-hidden rounded-lg aspect-square cursor-pointer"
+                onClick={() => setSelectedImageIndex(index)}
               >
                 <img
                   src={image.src}
@@ -171,7 +192,7 @@ const KalaRooms = () => {
       <section className="py-20 px-4 bg-black">
         {/* Fading Divider */}
         <div className="w-full flex justify-center my-12">
-          <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEBE5D] to-transparent opacity-70" />
+          <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEDE5B] to-transparent opacity-70" />
         </div>
         
         <div className="max-w-7xl mx-auto">
@@ -223,7 +244,7 @@ const KalaRooms = () => {
       <section className="py-20 px-4 bg-black">
         {/* Fading Divider */}
         <div className="w-full flex justify-center my-12">
-          <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEBE5D] to-transparent opacity-70" />
+          <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEDE5B] to-transparent opacity-70" />
         </div>
         
         <div className="max-w-4xl mx-auto text-center">
@@ -234,7 +255,7 @@ const KalaRooms = () => {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-bold text-white mb-8"
           >
-            Request a personalized कला <span className="text-red-600">Rooms</span> session and showcase your art
+            Request a personalized कला <span className="text-red-600 font-impact">Rooms</span> session and showcase your art
           </motion.h2>
           <motion.p
             initial={{ y: 30, opacity: 0 }}
@@ -245,19 +266,78 @@ const KalaRooms = () => {
           >
             Share your music with the world in our intimate studio setting. Let us capture your authentic sound and story.
           </motion.p>
-          <motion.button
+          <motion.a
+            href="mailto:hello@premise.co.in"
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
-            className="bg-red-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-700 transition-colors duration-300 shadow-lg hover:shadow-xl"
+            className="inline-block bg-red-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-700 transition-colors duration-300 shadow-lg hover:shadow-xl"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             Request a Session
-          </motion.button>
+          </motion.a>
         </div>
       </section>
+
+      {/* Image Modal */}
+      <AnimatePresence>
+        {selectedImageIndex !== null && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm"
+            onClick={closeModal}
+          >
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ duration: 0.3, type: "spring", stiffness: 300, damping: 30 }}
+              className="relative flex items-center justify-center p-4"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
+                src={galleryImages[selectedImageIndex].src}
+                alt={galleryImages[selectedImageIndex].alt}
+                className="max-w-[90vw] max-h-[90vh] w-auto h-auto object-contain rounded-lg shadow-2xl"
+              />
+              
+              {/* Close Button */}
+              <button
+                onClick={closeModal}
+                className="absolute -top-4 -right-4 w-12 h-12 bg-black/70 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/90 transition-colors duration-200 z-10 border-2 border-white/20"
+              >
+                <X size={24} />
+              </button>
+
+              {/* Previous Button */}
+              <button
+                onClick={goToPrevious}
+                className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors duration-200"
+              >
+                <ChevronLeft size={24} />
+              </button>
+
+              {/* Next Button */}
+              <button
+                onClick={goToNext}
+                className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors duration-200"
+              >
+                <ChevronRight size={24} />
+              </button>
+
+              {/* Image Counter */}
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-3 py-1 bg-black/50 backdrop-blur-sm rounded-full text-white text-sm">
+                {selectedImageIndex + 1} / {galleryImages.length}
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.div>
   );
 };
