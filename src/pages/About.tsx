@@ -226,7 +226,7 @@ const About = () => {
               Believe in authentic storytelling?<br/>
               Let's build something meaningful together.
             </p>
-            <a href="mailto:hello@premise.co.in" className="px-8 py-3 bg-[#FEDE5B] text-black font-bold rounded-full hover:bg-white transition-all duration-300 shadow-lg text-lg">
+            <a href="mailto:osgoyal@premise.co.in" className="px-8 py-3 bg-[#FEDE5B] text-black font-bold rounded-full hover:bg-white transition-all duration-300 shadow-lg text-lg">
               Work With Us
             </a>
           </div>
