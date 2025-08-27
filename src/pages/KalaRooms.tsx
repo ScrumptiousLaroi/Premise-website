@@ -100,6 +100,12 @@ const KalaRooms = () => {
       title: 'Rashim Anand Kala Rooms, Episode - 02',
       thumbnail: './kalarooms/Rashim_yt.jpg',
       youtubeUrl: 'https://www.youtube.com/watch?v=3CtI3BUSAJc'
+    },
+    {
+      id: 3,
+      title: 'The Pyaar Experience ft. Mohit Sengupta, Episode - 03',
+      thumbnail: './kalarooms/mohit_yt.jpg',
+      youtubeUrl: 'https://www.youtube.com/watch?v=PhxL9kTtZlE'
     }
   ];
 
