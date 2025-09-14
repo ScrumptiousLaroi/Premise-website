@@ -43,7 +43,8 @@ const Footer = () => (
       </div>
     </div>
     <div className="mt-8 text-center text-xs text-gray-600">
-      © 2025 <span className="font-impact">PREMISE.</span> All Stories Reserved.
+      © 2025 Premise Media.
+      All Stories Reserved.
     </div>
   </footer>
 );

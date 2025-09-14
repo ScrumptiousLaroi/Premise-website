@@ -28,47 +28,16 @@ const About = () => {
       transition={{ duration: 0.5 }}
       className="min-h-screen pt-20 bg-black"
     >
-      {/* WHY PREMISE. */}
+      {/* Who We Are */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-12">
-            WHY <span className="text-[#FEDE5B] font-impact">PREMISE.</span>?
-          </h1>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {/* For Music Lovers */}
-            <div className="bg-black border border-[#FEDE5B] rounded-3xl shadow-xl flex flex-col items-center px-8 py-10 text-center">
-              <h3 className="text-2xl font-bold text-[#FEDE5B] mb-4 uppercase tracking-wide">For Music Lovers</h3>
-              <p className="text-lg text-white font-light text-justify">
-                Stop consuming. Start connecting.<br />
-                We show you the story behind every song.
-              </p>
-            </div>
-            {/* For Artists */}
-            <div className="bg-black border border-[#FEDE5B] rounded-3xl shadow-xl flex flex-col items-center px-8 py-10 text-center">
-              <h3 className="text-2xl font-bold text-[#FEDE5B] mb-4 uppercase tracking-wide">For Artists</h3>
-              <p className="text-lg text-white font-light text-justify">
-                <br></br>Stop being just another name in a playlist.<br />
-                We make sure your story gets told.
-              </p>
-            </div>
-            {/* For the Culture */}
-            <div className="bg-black border border-[#FEDE5B] rounded-3xl shadow-xl flex flex-col items-center px-8 py-10 text-center">
-              <h3 className="text-2xl font-bold text-[#FEDE5B] mb-4 uppercase tracking-wide">For the Culture</h3>
-              <p className="text-lg text-white font-light text-justify">
-                Stop letting history disappear.<br />
-                We're preserving it for the next generation.
-              </p>
-            </div>
+          <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 mx-auto mb-12 rounded-full overflow-hidden shadow-2xl border-4 border-[#FEDE5B]/20">
+            <img 
+              src="./About page/who we are.jpeg" 
+              alt="Who We Are"
+              className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+            />
           </div>
-        </div>
-      </section>
-      {/* Fading line divider */}
-      <div className="w-full flex justify-center my-12">
-        <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEDE5B] to-transparent opacity-70" />
-      </div>
-      {/* Who We Are (restored below WHY PREMISE.) */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-8">
             Who We Are
           </h1>
@@ -85,15 +54,140 @@ const About = () => {
       <div className="w-full flex justify-center my-12">
         <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEDE5B] to-transparent opacity-70" />
       </div>
+      {/* WHY PREMISE. */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-12">
+            WHY <span className="text-[#FEDE5B] font-impact">PREMISE.</span> MEDIA?
+          </h1>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {/* For Music Lovers */}
+            <div className="bg-black border border-[#FEDE5B] rounded-3xl shadow-xl flex flex-col items-center px-8 py-10 text-center">
+              <div className="w-20 h-20 mb-6 rounded-full overflow-hidden">
+                <img 
+                  src="./About page/music lovers.jpeg" 
+                  alt="Music Lovers"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-2xl font-bold text-[#FEDE5B] mb-4 uppercase tracking-wide">For Music Lovers</h3>
+              <p className="text-lg text-white font-light text-justify">
+                Stop consuming. Start connecting.<br />
+                We show you the story behind every song.
+              </p>
+            </div>
+            {/* For Artists */}
+            <div className="bg-black border border-[#FEDE5B] rounded-3xl shadow-xl flex flex-col items-center px-8 py-10 text-center">
+              <div className="w-20 h-20 mb-6 rounded-full overflow-hidden">
+                <img 
+                  src="./About page/for artists.jpeg" 
+                  alt="For Artists"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-2xl font-bold text-[#FEDE5B] mb-4 uppercase tracking-wide">For Artists</h3>
+              <p className="text-lg text-white font-light text-justify">
+                <br></br>Stop being just another name in a playlist.<br />
+                We make sure your story gets told.
+              </p>
+            </div>
+            {/* For the Culture */}
+            <div className="bg-black border border-[#FEDE5B] rounded-3xl shadow-xl flex flex-col items-center px-8 py-10 text-center">
+              <div className="w-20 h-20 mb-6 rounded-full overflow-hidden">
+                <img 
+                  src="./About page/for the culture.jpg" 
+                  alt="For the Culture"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-2xl font-bold text-[#FEDE5B] mb-4 uppercase tracking-wide">For the Culture</h3>
+              <p className="text-lg text-white font-light text-justify">
+                Stop letting history disappear.<br />
+                We're preserving it for the next generation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Fading line divider */}
+      <div className="w-full flex justify-center my-12">
+        <span className="block w-48 h-1 rounded-full bg-gradient-to-r from-transparent via-[#FEDE5B] to-transparent opacity-70" />
+      </div>
 
       {/* What We Do */}
       <section className="py-10 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">What We Do</h2>
-          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-4">
+          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8">
             We turn casual listeners into superfans by showing them the human behind the art.<br/>
             Not just what they create. But who they are.
           </p>
+          
+          {/* Three core pillars */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+            {/* Supporting Artists */}
+            <div className="text-left">
+              <div className="w-16 h-16 mb-4 rounded-full overflow-hidden">
+                <img 
+                  src="./About page/supporting artists.jpeg" 
+                  alt="Supporting Artists"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-[#FEDE5B] mb-4">Supporting Artists</h3>
+              <p className="text-gray-300 mb-4">
+                We craft unique social media campaigns, countdowns to releases, and interactive activations that drive deeper connections and long-term loyalty.
+              </p>
+              <ul className="text-sm text-gray-400 space-y-2">
+                <li>• Teaser reels & behind-the-scenes content</li>
+                <li>• Interactive Q&As & influencer collaborations</li>
+                <li>• Virtual treasure hunts & exclusive previews</li>
+                <li>• In-person fan events & activations</li>
+              </ul>
+            </div>
+
+            {/* Uncovering Stories */}
+            <div className="text-left">
+              <div className="w-16 h-16 mb-4 rounded-full overflow-hidden">
+                <img 
+                  src="./About page/uncovering stories.jpeg" 
+                  alt="Uncovering Stories"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-[#FEDE5B] mb-4">Uncovering Stories</h3>
+              <p className="text-gray-300 mb-4">
+                We share behind-the-scenes journeys of artists, producers, and creatives through editorial and multimedia platforms.
+              </p>
+              <ul className="text-sm text-gray-400 space-y-2">
+                <li>• Spotlight overlooked talent in Indian music</li>
+                <li>• Connect audiences to the core of creation</li>
+                <li>• Document authentic artistic journeys</li>
+                <li>• Preserve cultural narratives for future generations</li>
+              </ul>
+            </div>
+
+            {/* Creating Events */}
+            <div className="text-left">
+              <div className="w-16 h-16 mb-4 rounded-full overflow-hidden">
+                <img 
+                  src="./About page/creating events.jpg" 
+                  alt="Creating Events"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-[#FEDE5B] mb-4">Creating Events</h3>
+              <p className="text-gray-300 mb-4">
+                We organize live sessions, panel discussions, and interactive performances that bring communities together.
+              </p>
+              <ul className="text-sm text-gray-400 space-y-2">
+                <li>• Speaker spotlights & teaser campaigns</li>
+                <li>• Digital marketing & social amplification</li>
+                <li>• Interactive onsite experiences</li>
+                <li>• Branded video content & wearables</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
       {/* Fading line divider */}
